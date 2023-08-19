@@ -59,7 +59,7 @@ class LandingHome extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(width: 20), // Espace entre l'image et le texte
+              const SizedBox(width: 20),
               const Flexible(child:
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,7 +67,7 @@ class LandingHome extends StatelessWidget {
                   Wrap(
                     children: [
               Padding(
-              padding: EdgeInsets.all(16.0), // Ajoutez ici le padding souhaité
+              padding: EdgeInsets.all(16.0), //
                 child:
                       Text(
                         "Après avoir appris seul sur youtube je me suis lancé dans plusieurs "
