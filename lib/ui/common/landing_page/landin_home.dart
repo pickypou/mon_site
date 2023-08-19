@@ -70,19 +70,20 @@ class LandingHome extends StatelessWidget {
               padding: EdgeInsets.all(16.0), // Ajoutez ici le padding souhaité
                 child:
                       Text(
-                        "Après avoir appris seul sur youtube je me suis lancer dans plusieurs "
-                            " formation de développeur Web & Web mobil certaine certifiante et d'autre diplomante"
-                            " comme apple foundation via simplon ou chez 26 accadamy ou j'ai obtenue un certificats opquast"
-                            " chez sutdi ou j'ai fait une formation développeur full strack pour l'obtention d'un bac+2 en développement"
-                            " Web et Web mobile"
-                            " que j'ai réussi avec succé aujoud'huit je me suis installer comme auto-entrepreneur "
-                            " ",
+                        "Après avoir appris seul sur youtube je me suis lancé dans plusieurs "
+                            " formations de développeur Web & Web mobile, certaines certifiantes et d'autres diplomantes"
+                            " comme Apple Foundation via Simplon ou un certificat Opquast via 26 Academy."
+                            "  A la suite d'une formation développeur full strack chez Studi j'ai obtenu le diplôme de niveau "
+                            "5 (bac+2) en développement Web et Web mobile."
+                            " Aujoud'hui je me suis installé comme auto-entrepreneur ",
+
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,
                           fontWeight: FontWeight.w100,
                         ),
                       ),
+
               ),
                     ],
                   ),
