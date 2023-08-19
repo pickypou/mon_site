@@ -46,31 +46,52 @@ class LandingHome extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(
-                width: 200,
-                height: 200,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/ludo.png"),
-                    fit: BoxFit.cover,
+              Align(
+                alignment: Alignment.bottomLeft,
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  height: MediaQuery.of(context).size.height * 0.6,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/ludo.png"),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
-              SizedBox(width: 120), // Espace entre l'image et le texte
-              const Column(
+              const SizedBox(width: 20), // Espace entre l'image et le texte
+              const Flexible(child:
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Texte à côté de l'image",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Wrap(
+                    children: [
+              Padding(
+              padding: EdgeInsets.all(16.0), // Ajoutez ici le padding souhaité
+                child:
+                      Text(
+                        "Après avoir appris seul sur youtube je me suis lancer dans plusieurs "
+                            " formation de développeur Web & Web mobil certaine certifiante et d'autre diplomante"
+                            " comme apple foundation via simplon ou chez 26 accadamy ou j'ai obtenue un certificats opquast"
+                            " chez sutdi ou j'ai fait une formation développeur full strack pour l'obtention d'un bac+2 en développement"
+                            " Web et Web mobile"
+                            " que j'ai réussi avec succé aujoud'huit je me suis installer comme auto-entrepreneur "
+                            " ",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w100,
+                        ),
+                      ),
+              ),
+                    ],
                   ),
                   // Ajoutez d'autres textes si nécessaire
                 ],
               ),
+
+              )
+
             ],
           ),
         ],
