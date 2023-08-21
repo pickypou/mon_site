@@ -1,26 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:mon_site/ui/common/landing_page/landin_home.dart';
+import 'package:mon_site/theme.dart';
+
+import 'landing-home/landing_home.dart';
+import 'landing-home/show_more_button.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    ScrollController controller = ScrollController();
+    return  MaterialApp(
+      theme: theme,
       debugShowCheckedModeBanner: false,
+
       title: 'SPYSSCHAERT Ludovic',
       home: Scaffold(
-        body: Container(
-          color: Colors.grey[800], // Couleur de fond gris foncé
-          child:  const SingleChildScrollView(
-            child: Column(
-              children: [
-                LandingHome(),
-              ],
-            ),
 
+        body: SingleChildScrollView(
+
+          controller: controller,
+          child: Stack(
+            children: [
+              const Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  LandingHome(),
+                ],
+              ),
+              ShowMoreButton(scrollController: controller),
+            ],
           ),
-        ),
+        )
       ),
     );
   }
