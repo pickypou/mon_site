@@ -15,7 +15,7 @@ class ShowMoreButton extends StatelessWidget {
     return Padding(
         padding: EdgeInsets.only(
           top: size.headerHeight() -25,
-          left: size.width * 6 - 95
+          left: size.width * .6 - 130
         ),
     child: ElevatedButton(
       onPressed: () {
@@ -26,6 +26,7 @@ class ShowMoreButton extends StatelessWidget {
         );
       },
       style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.orangeAccent),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30.0),
@@ -44,7 +45,7 @@ class ShowMoreButton extends StatelessWidget {
               height: 25,
               width: 25,
             ),
-            const Text("EN savoir plus...",
+            const Text("EN SAVOIR PLUS...",
             style: TextStyle(color: Colors.white),),
           ],
         ),
