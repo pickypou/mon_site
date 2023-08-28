@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:freelance/extensions/context_extensions.dart';
+import 'package:mon_site/size_extensions.dart';
 
 class LandingHome extends StatelessWidget {
   const LandingHome({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class LandingHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = context.mediaSize;
-    double? titleFont = size.width / 10;
+    double? titleFont = size.width /10;
 
     return Container(
       height: MediaQuery.of(context).size.height,
@@ -21,12 +22,12 @@ class LandingHome extends StatelessWidget {
           Text(
             "SPYSSCHAERT",
             style:GoogleFonts.roboto(
-              textStyle: const TextStyle(
-                fontSize: 55,
+              textStyle:  TextStyle(
+                fontSize: titleFont,
                 color: Colors.orangeAccent,
                 fontWeight: FontWeight.w400,
               ),
-          ),
+            ),
           ),
           Text(
             "Ludovic",
@@ -65,8 +66,8 @@ class LandingHome extends StatelessWidget {
               Align(
                 alignment: Alignment.bottomLeft,
                 child: Container(
-                  width: MediaQuery.sizeOf(context).width,
-                  height: MediaQuery.sizeOf(context).height /2,
+                width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height/2,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("assets/images/ludo.png"),
