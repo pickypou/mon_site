@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mon_site/size_extensions.dart';
 import 'package:mon_site/ui/common/landing_page/more_infos/cards-Info.dart';
 import 'package:freelance/extensions/context_extensions.dart';
+import 'package:mon_site/ui/common/landing_page/more_infos/certificat.dart';
+import 'package:mon_site/ui/common/landing_page/more_infos/portfolio.dart';
 import 'orientation_stack.dart';
 
 
@@ -18,8 +20,11 @@ class MoreInfos extends StatelessWidget {
 
       child: OrientedStack(
         orientation: orientation,
-        children: [
+        children: const [
+          Portfolio(),
           CardInfos(),
+
+
         ],
 
       ),

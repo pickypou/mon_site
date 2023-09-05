@@ -59,7 +59,7 @@ class LandingHome extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 155,),
+          const SizedBox(height: 170,),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [

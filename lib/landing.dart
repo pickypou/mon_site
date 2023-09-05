@@ -5,7 +5,8 @@ import 'package:mon_site/ui/common/landing_page/landing-home/show_more_button.da
 import 'package:freelance/extensions/context_extensions.dart';
 import 'package:mon_site/size_extensions.dart';
 import 'package:mon_site/ui/common/landing_page/more_infos/more_infos.dart';
-
+import 'package:mon_site/ui/common/landing_page/more_infos/orientation_stack.dart';
+import 'package:mon_site/ui/common/landing_page/more_infos/oriented_size_box.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -13,7 +14,9 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScrollController controller = ScrollController();
-    Size size = MediaQuery.sizeOf(context);
+    final size = MediaQuery.sizeOf(context);
+    final isLandscape = size.orientation() == SizeOrientation.paysage;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Mon site entreprise",
@@ -21,20 +24,27 @@ class LandingPage extends StatelessWidget {
       home: Scaffold(
         body: SingleChildScrollView(
           controller: controller,
-          child:  Stack(
+          child: Column(
             children: [
-              const Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+              const LandingHome(),
+              OrientedStack(
+                orientation: size.orientation(),
                 children: [
-                  LandingHome(),
-                  MoreInfos(),
+                  if (isLandscape)
+                    OrientedSizedBox(
+                      size: size,
+                      fraction: 1/3,
+                      child: const MoreInfos(),
+                    )
+                  else
+                    const MoreInfos(),
+
                 ],
               ),
-              ShowMoreButton(scrollController: controller,),
             ],
           ),
         ),
-      ),
+      ), ShowMoreButton(scrollController: controller,),
     );
   }
 }
